@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo Pixel - Pagina 4</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '000000000000000');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=000000000000000&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <p class="step">Pagina 4 di 4</p>
+  <h1>PIATTAFORMA BANDI</h1>
+  <p class="sub">pixel con evento Lead appena si preme il tasto Invia</p>
+
+  <form id="modulo" novalidate>
+    <label>Nome<input type="text" name="nome" placeholder="Mario"></label>
+    <label>Cognome<input type="text" name="cognome" placeholder="Rossi"></label>
+    <label>Email<input type="email" name="email" placeholder="mario.rossi@email.it"></label>
+    <label>Telefono<input type="tel" name="telefono" placeholder="333 1234567"></label>
+    <button type="submit">Invia</button>
+    <p id="esito" hidden></p>
+  </form>
+</main>
+<p class="nota">ID pixel di esempio: l'avviso del plugin sull'ID non valido è normale, gli eventi vengono comunque rilevati.</p>
+<nav><a class="btn" href="pagina3.html">&larr; Indietro</a><span class="btn off">Avanti &rarr;</span></nav>
+
+<script>
+  document.getElementById('modulo').addEventListener('submit', function (e) {
+    e.preventDefault();
+    fbq('track', 'Lead');
+    var esito = document.getElementById('esito');
+    esito.textContent = 'Evento Lead inviato al pixel';
+    esito.hidden = false;
+  });
+</script>
+</body>
+</html>

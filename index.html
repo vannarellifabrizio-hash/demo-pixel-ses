@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo Pixel - Pagina 1</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '000000000000000');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=000000000000000&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <p class="step">Pagina 1 di 4</p>
+  <h1>SITO SPORT E SALUTE</h1>
+  <p class="sub">pixel con evento PageView</p>
+
+</main>
+<p class="nota">ID pixel di esempio: l'avviso del plugin sull'ID non valido è normale, gli eventi vengono comunque rilevati.</p>
+<nav><span class="btn off">&larr; Indietro</span><a class="btn" href="pagina2.html">Avanti &rarr;</a></nav>
+
+</body>
+</html>
