@@ -25,6 +25,7 @@ src="https://www.facebook.com/tr?id=123456789012345&ev=PageView&noscript=1"/></n
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="banner" hidden>Candidatura inviata</div>
 <main>
   <p class="step">Pagina 4 di 4</p>
   <h1>PIATTAFORMA BANDI</h1>
@@ -36,7 +37,6 @@ src="https://www.facebook.com/tr?id=123456789012345&ev=PageView&noscript=1"/></n
     <label>Email<input type="email" name="email" placeholder="mario.rossi@email.it"></label>
     <label>Telefono<input type="tel" name="telefono" placeholder="333 1234567"></label>
     <button type="submit">Invia</button>
-    <p id="esito" hidden></p>
   </form>
 </main>
 <p class="nota">ID pixel di esempio: l'avviso del plugin sull'ID non valido è normale, gli eventi vengono comunque rilevati.</p>
@@ -45,10 +45,8 @@ src="https://www.facebook.com/tr?id=123456789012345&ev=PageView&noscript=1"/></n
 <script>
   document.getElementById('modulo').addEventListener('submit', function (e) {
     e.preventDefault();
+    document.getElementById('banner').hidden = false;
     fbq('track', 'Lead');
-    var esito = document.getElementById('esito');
-    esito.textContent = 'Evento Lead inviato al pixel';
-    esito.hidden = false;
   });
 </script>
 </body>
